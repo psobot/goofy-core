@@ -130,7 +130,7 @@ setInterval(
 					const messageBody = messageWithEmojis(message.querySelector(MESSAGE_PREVIEW));
 
 					if (latestMessages.get(id) !== messageBody) {
-						const name = message.querySelector(MESSAGE_SENDER).textContent;
+						const name = messageWithEmojis(message.querySelector(MESSAGE_SENDER));
 						const image = message.querySelector(MESSAGE_SENDER_PICTURE).getAttribute('src');
 
 						// check if it's a message from myself
